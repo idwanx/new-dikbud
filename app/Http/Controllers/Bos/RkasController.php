@@ -19,7 +19,6 @@ use Illuminate\Support\Facades\Gate;
 
 class RkasController extends Controller
 {
-
     public $roleuser;
 
     public function __construct()
