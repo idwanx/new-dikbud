@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 
 class SekolahController extends Controller
 {
-    public $loadDefault = '150';
+    public $loadDefault = '20';
 
     /**
      * Display a listing of the resource.

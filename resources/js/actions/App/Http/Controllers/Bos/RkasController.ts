@@ -104,7 +104,7 @@ rincian.form = rincianForm
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::rekapitulasi
-* @see app/Http/Controllers/Bos/RkasController.php:117
+* @see app/Http/Controllers/Bos/RkasController.php:116
 * @route '/bos/{tahun?}/rkas-rekapitulasi/checkuser'
 */
 export const rekapitulasi = (args?: { tahun?: string | number } | [tahun: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -119,7 +119,7 @@ rekapitulasi.definition = {
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::rekapitulasi
-* @see app/Http/Controllers/Bos/RkasController.php:117
+* @see app/Http/Controllers/Bos/RkasController.php:116
 * @route '/bos/{tahun?}/rkas-rekapitulasi/checkuser'
 */
 rekapitulasi.url = (args?: { tahun?: string | number } | [tahun: string | number ] | string | number, options?: RouteQueryOptions) => {
@@ -150,7 +150,7 @@ rekapitulasi.url = (args?: { tahun?: string | number } | [tahun: string | number
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::rekapitulasi
-* @see app/Http/Controllers/Bos/RkasController.php:117
+* @see app/Http/Controllers/Bos/RkasController.php:116
 * @route '/bos/{tahun?}/rkas-rekapitulasi/checkuser'
 */
 rekapitulasi.get = (args?: { tahun?: string | number } | [tahun: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -160,7 +160,7 @@ rekapitulasi.get = (args?: { tahun?: string | number } | [tahun: string | number
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::rekapitulasi
-* @see app/Http/Controllers/Bos/RkasController.php:117
+* @see app/Http/Controllers/Bos/RkasController.php:116
 * @route '/bos/{tahun?}/rkas-rekapitulasi/checkuser'
 */
 rekapitulasi.head = (args?: { tahun?: string | number } | [tahun: string | number ] | string | number, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -170,7 +170,7 @@ rekapitulasi.head = (args?: { tahun?: string | number } | [tahun: string | numbe
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::rekapitulasi
-* @see app/Http/Controllers/Bos/RkasController.php:117
+* @see app/Http/Controllers/Bos/RkasController.php:116
 * @route '/bos/{tahun?}/rkas-rekapitulasi/checkuser'
 */
 const rekapitulasiForm = (args?: { tahun?: string | number } | [tahun: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -180,7 +180,7 @@ const rekapitulasiForm = (args?: { tahun?: string | number } | [tahun: string | 
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::rekapitulasi
-* @see app/Http/Controllers/Bos/RkasController.php:117
+* @see app/Http/Controllers/Bos/RkasController.php:116
 * @route '/bos/{tahun?}/rkas-rekapitulasi/checkuser'
 */
 rekapitulasiForm.get = (args?: { tahun?: string | number } | [tahun: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -190,7 +190,7 @@ rekapitulasiForm.get = (args?: { tahun?: string | number } | [tahun: string | nu
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::rekapitulasi
-* @see app/Http/Controllers/Bos/RkasController.php:117
+* @see app/Http/Controllers/Bos/RkasController.php:116
 * @route '/bos/{tahun?}/rkas-rekapitulasi/checkuser'
 */
 rekapitulasiForm.head = (args?: { tahun?: string | number } | [tahun: string | number ] | string | number, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -318,7 +318,7 @@ detail_rincian.form = detail_rincianForm
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::detail_rekapitulasi
-* @see app/Http/Controllers/Bos/RkasController.php:132
+* @see app/Http/Controllers/Bos/RkasController.php:131
 * @route '/bos/{tahun?}/rkas/rekapitulasi/{jenjangs?}/{sumberdana?}'
 */
 export const detail_rekapitulasi = (args?: { tahun?: string | number, jenjangs?: string | number, sumberdana?: string | number } | [tahun: string | number, jenjangs: string | number, sumberdana: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -333,7 +333,7 @@ detail_rekapitulasi.definition = {
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::detail_rekapitulasi
-* @see app/Http/Controllers/Bos/RkasController.php:132
+* @see app/Http/Controllers/Bos/RkasController.php:131
 * @route '/bos/{tahun?}/rkas/rekapitulasi/{jenjangs?}/{sumberdana?}'
 */
 detail_rekapitulasi.url = (args?: { tahun?: string | number, jenjangs?: string | number, sumberdana?: string | number } | [tahun: string | number, jenjangs: string | number, sumberdana: string | number ], options?: RouteQueryOptions) => {
@@ -368,7 +368,7 @@ detail_rekapitulasi.url = (args?: { tahun?: string | number, jenjangs?: string |
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::detail_rekapitulasi
-* @see app/Http/Controllers/Bos/RkasController.php:132
+* @see app/Http/Controllers/Bos/RkasController.php:131
 * @route '/bos/{tahun?}/rkas/rekapitulasi/{jenjangs?}/{sumberdana?}'
 */
 detail_rekapitulasi.get = (args?: { tahun?: string | number, jenjangs?: string | number, sumberdana?: string | number } | [tahun: string | number, jenjangs: string | number, sumberdana: string | number ], options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -378,7 +378,7 @@ detail_rekapitulasi.get = (args?: { tahun?: string | number, jenjangs?: string |
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::detail_rekapitulasi
-* @see app/Http/Controllers/Bos/RkasController.php:132
+* @see app/Http/Controllers/Bos/RkasController.php:131
 * @route '/bos/{tahun?}/rkas/rekapitulasi/{jenjangs?}/{sumberdana?}'
 */
 detail_rekapitulasi.head = (args?: { tahun?: string | number, jenjangs?: string | number, sumberdana?: string | number } | [tahun: string | number, jenjangs: string | number, sumberdana: string | number ], options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -388,7 +388,7 @@ detail_rekapitulasi.head = (args?: { tahun?: string | number, jenjangs?: string 
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::detail_rekapitulasi
-* @see app/Http/Controllers/Bos/RkasController.php:132
+* @see app/Http/Controllers/Bos/RkasController.php:131
 * @route '/bos/{tahun?}/rkas/rekapitulasi/{jenjangs?}/{sumberdana?}'
 */
 const detail_rekapitulasiForm = (args?: { tahun?: string | number, jenjangs?: string | number, sumberdana?: string | number } | [tahun: string | number, jenjangs: string | number, sumberdana: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -398,7 +398,7 @@ const detail_rekapitulasiForm = (args?: { tahun?: string | number, jenjangs?: st
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::detail_rekapitulasi
-* @see app/Http/Controllers/Bos/RkasController.php:132
+* @see app/Http/Controllers/Bos/RkasController.php:131
 * @route '/bos/{tahun?}/rkas/rekapitulasi/{jenjangs?}/{sumberdana?}'
 */
 detail_rekapitulasiForm.get = (args?: { tahun?: string | number, jenjangs?: string | number, sumberdana?: string | number } | [tahun: string | number, jenjangs: string | number, sumberdana: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -408,7 +408,7 @@ detail_rekapitulasiForm.get = (args?: { tahun?: string | number, jenjangs?: stri
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::detail_rekapitulasi
-* @see app/Http/Controllers/Bos/RkasController.php:132
+* @see app/Http/Controllers/Bos/RkasController.php:131
 * @route '/bos/{tahun?}/rkas/rekapitulasi/{jenjangs?}/{sumberdana?}'
 */
 detail_rekapitulasiForm.head = (args?: { tahun?: string | number, jenjangs?: string | number, sumberdana?: string | number } | [tahun: string | number, jenjangs: string | number, sumberdana: string | number ], options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -425,7 +425,7 @@ detail_rekapitulasi.form = detail_rekapitulasiForm
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::importMethod
-* @see app/Http/Controllers/Bos/RkasController.php:187
+* @see app/Http/Controllers/Bos/RkasController.php:186
 * @route '/import-data/rkas'
 */
 export const importMethod = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -440,7 +440,7 @@ importMethod.definition = {
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::importMethod
-* @see app/Http/Controllers/Bos/RkasController.php:187
+* @see app/Http/Controllers/Bos/RkasController.php:186
 * @route '/import-data/rkas'
 */
 importMethod.url = (options?: RouteQueryOptions) => {
@@ -449,7 +449,7 @@ importMethod.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::importMethod
-* @see app/Http/Controllers/Bos/RkasController.php:187
+* @see app/Http/Controllers/Bos/RkasController.php:186
 * @route '/import-data/rkas'
 */
 importMethod.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -459,7 +459,7 @@ importMethod.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::importMethod
-* @see app/Http/Controllers/Bos/RkasController.php:187
+* @see app/Http/Controllers/Bos/RkasController.php:186
 * @route '/import-data/rkas'
 */
 const importMethodForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -469,7 +469,7 @@ const importMethodForm = (options?: RouteQueryOptions): RouteFormDefinition<'pos
 
 /**
 * @see \App\Http\Controllers\Bos\RkasController::importMethod
-* @see app/Http/Controllers/Bos/RkasController.php:187
+* @see app/Http/Controllers/Bos/RkasController.php:186
 * @route '/import-data/rkas'
 */
 importMethodForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({

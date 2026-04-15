@@ -29,7 +29,7 @@ export function BosNavMain() {
             role: null,
         },
         {
-            title: 'Realisasi',
+            title: 'Transaksi',
             href: bos.transaksi.index(tahun),
             icon: BanknoteArrowDown,
             isActive: page.url.startsWith(`/bos/${tahun}/transaksi`),

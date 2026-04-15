@@ -1,1 +1,0 @@
-import"./jsx-runtime-CQD49VtS.js";import"./navigation-menu-DXBgd3G3.js";import"./bos-BPHN-UjJ.js";import{t as e}from"./tab-menu-BD0aKRKW.js";export{e as TabsMenu};

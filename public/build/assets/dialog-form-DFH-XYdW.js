@@ -1,0 +1,1 @@
+import{t as e}from"./dialog-form-HSxRHkt2.js";export{e as DialogForm};

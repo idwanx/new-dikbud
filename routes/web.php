@@ -36,7 +36,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('bos/{tahun?}/dashboard', DashboardController::class)->name('bos.dashboard');
 
     // Transaksi
-    Route::get('bos/{tahun?}/transaksi', [TransaksiController::class, 'index'])->name('bos.transaksi.index');
+    Route::get('bos/{tahun?}/transaksi/index', [TransaksiController::class, 'index'])->name('bos.transaksi.index');
+    Route::get('bos/{tahun?}/transaksi/{jenjangs?}/{npsn?}', [TransaksiController::class, 'transaksi_persekolah'])->name('bos.transaksi.persekolah');
     Route::post('transaksi/store', [TransaksiController::class, 'store_transaksi'])->name('bos.transaksi.store');
     Route::delete('transaksi/destroy/{transaksi}', [TransaksiController::class, 'destroy_transaksi'])->name('bos.transaksi.destroy');
     Route::post('transaksi/validasi/{nomor}', [TransaksiController::class, 'validasi_transaksi'])->name('bos.transaksi.validasi');

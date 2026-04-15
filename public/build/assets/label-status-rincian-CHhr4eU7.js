@@ -1,0 +1,1 @@
+import{t as e}from"./label-status-rincian-CPnrrtQ3.js";export{e as LabelStatusRincian};

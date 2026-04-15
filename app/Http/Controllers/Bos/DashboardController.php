@@ -62,7 +62,6 @@ class DashboardController extends Controller
 
         // ->select(DB::raw('count(*) as user_count, status'))
 
-
         return Inertia::render('bos/dashboard', [
             'rkas' => $rkas
         ]);

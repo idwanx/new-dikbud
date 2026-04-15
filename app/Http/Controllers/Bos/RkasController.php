@@ -48,7 +48,6 @@ class RkasController extends Controller
             abort(404);
         }
 
-        
         if ($request->sumberdana) {
             switch ($request->sumberdana) {
                 case 'bosp-reguler': 

@@ -373,7 +373,7 @@ export default function DaftarRincian({ auth, tahun, sekolah, pengajuan, rincian
                         :
                         <Check />
                         }
-                         Setujui
+                         Submit
                     </Button>
                 </div>
             ):(
@@ -386,7 +386,7 @@ export default function DaftarRincian({ auth, tahun, sekolah, pengajuan, rincian
                             :
                             <Check />
                             }
-                            Validasi
+                            Submit
                         </Button>
                     </div>
             )}

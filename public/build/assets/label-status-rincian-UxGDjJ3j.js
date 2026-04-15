@@ -1,1 +1,0 @@
-import"./jsx-runtime-CQD49VtS.js";import"./badge-DBNVHN0K.js";import{t as e}from"./label-status-rincian-DV2tAvWk.js";export{e as LabelStatusRincian};

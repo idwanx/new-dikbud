@@ -88,7 +88,6 @@ export function TableSekolah({ penerimas, openDialogForm, openAlertDestroy }: Pr
         </div>
         <div className="flex flex-1 flex-row-reverse">
             <Pagination links={penerimas.links} meta={penerimas?.meta} />
-
         </div>
     </div>
     </>

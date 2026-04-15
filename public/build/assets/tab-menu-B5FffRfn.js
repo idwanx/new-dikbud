@@ -1,0 +1,1 @@
+import{t as e}from"./tab-menu-Dmd6oCKk.js";export{e as TabsMenu};

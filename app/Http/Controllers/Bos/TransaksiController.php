@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Bos;
 use App\Events\TransaksiEvent;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Bos\PengajuanRequest;
+use App\Http\Resources\Bos\TransaksiResource;
 use App\Models\Pengajuan;
 use App\Models\Transaksi;
 use Exception;
@@ -19,16 +20,58 @@ use Illuminate\Http\RedirectResponse;
 class TransaksiController extends Controller
 {
     public $roleuser;
+    public $loadDefault = '20';
 
     public function __construct()
     {
         $this->roleuser = Auth::user()->roleuser()->firstOrFail();
     }
 
-    public function index(): Response
+    public function index(Request $request): RedirectResponse
     {
-        return Inertia::render('bos/realisasi/transaksi', [
+        // return Inertia::render('bos/transaksi/transaksi', [
 
+        // ]);
+
+        if ($this->roleuser->slug === "admin" || $this->roleuser->slug === "approval" || $this->roleuser->slug === "checker") {
+            return redirect()->route('bos.transaksi.persekolah', [
+                'tahun' => $request->tahun,
+            ]);
+        } else {
+            return redirect()->route('bos.transaksi.persekolah', [
+                'tahun' => $request->tahun,
+                'jenjangs' => $this->roleuser->jenjang,
+                'npsn' => $this->roleuser->npsn,
+            ]);
+        }
+    }
+
+    public function transaksi_persekolah(Request $request): Response
+    {
+        if ($request->npsn) {
+            if ($this->roleuser->slug === "admin" || $this->roleuser->slug === "approval" || $this->roleuser->slug === "checker") {
+                $sekolah = DB::table('sekolahs')->select('sekolahs.id')->where('npsn', $request->npsn)->firstOrFail();
+
+                $transaksis = DB::table('transaksis')->select('transaksis.id', 'transaksis.uraian', 
+                        'transaksis.nominal', 'transaksis.created_at', 'penerimas.nama_penerima', 'penerimas.nama_bank', 'penerimas.no_rekening')
+                        ->leftJoin('penerimas', 'transaksis.penerima_id', '=', 'penerimas.id')
+                        ->where('transaksis.sekolah_id', $sekolah->id)
+                        ->orderBy('transaksis.created_at', 'desc');
+            } else {
+                $transaksis = DB::table('transaksis')->select('transaksis.id', 'transaksis.uraian', 
+                        'transaksis.nominal', 'transaksis.created_at', 'penerimas.nama_penerima', 'penerimas.nama_bank', 'penerimas.no_rekening')
+                        ->leftJoin('penerimas', 'transaksis.penerima_id', '=', 'penerimas.id')
+                        ->where('transaksis.sekolah_id', $this->roleuser->sekolah_id)
+                        ->orderBy('transaksis.created_at', 'desc');
+            }
+        } else {
+            $transaksis = null;
+        }
+
+        return Inertia::render('bos/transaksi/transaksi', [
+            'jenjangs' => $request->jenjangs,
+            'npsn' => $request->npsn,
+            'transaksis' => $request->npsn ? TransaksiResource::collection($transaksis->paginate($request->load ?? $this->loadDefault)->withQueryString()) : $transaksis
         ]);
     }
 

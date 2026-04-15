@@ -79,7 +79,6 @@ export function TableDinas({ penerimas }: Props) {;
         </div>
         <div className="flex flex-1 flex-row-reverse">
             <Pagination links={penerimas.links} meta={penerimas?.meta} />
-
         </div>
     </div>
     </>
